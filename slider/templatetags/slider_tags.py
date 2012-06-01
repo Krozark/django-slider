@@ -9,10 +9,10 @@ def get_random_item(l,max=None):
     res= []
     size = len(l)
     indexs = range(0,size)
-    if max = None:
+    if max == None:
         max = size
 
-    for i in range(0: max):
+    for i in range(0, max):
         index = random.choice(indexs)
         indexs.pop(index)
         res += l[index]
