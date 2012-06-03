@@ -19,8 +19,8 @@ def get_random_item(l,max=None):
     return res
 
 @register.assignment_tag
-def get_slider_images(limit=False, randomize=True):
-    qs = SliderImage.objects.filter(is_visible=True)
+def get_slider_images(limit=False, randomize=True, slider=1):
+    qs = SliderImage.objects.filter(is_visible=True,slider=slider)
     if randomize is True and limit is True :
         qs = get_random_item(qs,limit)
     elif randomize is True:  
