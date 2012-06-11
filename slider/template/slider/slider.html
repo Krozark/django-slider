@@ -1,8 +1,8 @@
 {% load slider_tags %}
 
-<script src="{{STATIC_URL}}website/galleria/galleria.min.js"></script>
+<script src="{{STATIC_URL}}slider/galleria/galleria.min.js"></script>
 <script>
-    Galleria.loadTheme('{{ STATIC_URL }}website/galleria/themes/dots/galleria.dots.js');
+    Galleria.loadTheme('{{ STATIC_URL }}slider/galleria/themes/dots/galleria.dots.js');
     $(function(){
         if ($('#slider img').length) {
             $('#slider').galleria({
