@@ -1,0 +1,30 @@
+{% load slider_tags %}
+
+<script src="{{STATIC_URL}}website/galleria/galleria.min.js"></script>
+<script>
+    Galleria.loadTheme('{{ STATIC_URL }}website/galleria/themes/dots/galleria.dots.js');
+    $(function(){
+        if ($('#slider img').length) {
+            $('#slider').galleria({
+                autoplay: true,
+                carousel: false,
+                show_info: false,
+                thumbnails: false,
+                transition: 'doorslide',
+                imageMargin: 0,
+                showImagenav: false,
+                margin: 0,
+                height: 480,
+                width: 960
+            });
+        }
+    });
+</script>
+
+<ul id="slider">
+    {% get_slider_images limit=5 slider=1 as images %}
+    {% for image in images %}
+    <li><img src="{{MEDIA_URL}}{{image.image }}"></li>
+    {% endfor %}
+</ul>
+

@@ -8,6 +8,8 @@ def get_slider_images(limit=False, randomize=True, slider=1):
 
     qs = SliderImage.objects.filter(is_visible=True,slider=slider)
     
+    print randomize
+
     if randomize:
         qs = qs.order_by('?')
 
