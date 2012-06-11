@@ -5,4 +5,4 @@ from slider.models import *
 
 class SliderAdmin(admin.ModelAdmin):
 	list_display= ('slider','is_visible')
-admin.site.register(Slider,SliderAdmin)
+admin.site.register(SliderImage,SliderAdmin)
