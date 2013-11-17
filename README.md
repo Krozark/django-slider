@@ -22,7 +22,7 @@ In your page.html :
 
     {% load slider_tags %}
 
-    {% get_slider_image as images [limit=False randomize=True slider=1] %}
+    {% get_slider_images as images [limit=False randomize=True slider=1] %}
     {% for image in images %}
     <li><img src="{{MEDIA_URL}}{{image.image }}"></li>
     {% endfor %}
