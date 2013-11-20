@@ -7,6 +7,7 @@ Requirement:
 ------------
 
 Django 1.3+
+easy_thumbnails
 
 Instalation:
 ------------
